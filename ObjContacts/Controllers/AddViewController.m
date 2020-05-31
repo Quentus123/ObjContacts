@@ -74,7 +74,7 @@
 //MARK: UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
-    self.userPhotoImageView.image = (UIImage*)info[UIImagePickerControllerOriginalImage];
+    self.userPhotoImageView.image = (UIImage*)info[UIImagePickerControllerEditedImage];
     self.isImageChanged = true;
     [picker dismissViewControllerAnimated:true completion:nil];
 }
